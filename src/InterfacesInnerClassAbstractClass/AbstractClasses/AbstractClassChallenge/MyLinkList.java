@@ -65,6 +65,8 @@ public class MyLinkList implements NodeList {
     public boolean deleteItem(ListItem item) {
         if(item!=null){
             System.out.println("Deleting the item "+ item.getValue());
+        }else{
+            System.out.println("The item is null");
         }
         if((this.root).compareTo(item)==0){
                 this.root.next().setPrevious(null);
@@ -73,12 +75,13 @@ public class MyLinkList implements NodeList {
             }else{
                 ListItem currentItem=this.root;
                 while (currentItem!=null){
-                    if((currentItem).compareTo(item)==0){
+                    if(((currentItem).compareTo(item))==0){
                         currentItem.previous().setNext(currentItem.next());
                         if(currentItem.next()!=null){
                             currentItem.next().setPrevious(currentItem.previous());
+                            return true;
                         }
-                    }else if(currentItem.compareTo(item)<0){
+                    }else if((currentItem.compareTo(item))<0){
                         currentItem=currentItem.next();
                     }else{
                         return false;

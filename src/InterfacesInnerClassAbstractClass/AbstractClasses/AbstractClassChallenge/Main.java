@@ -18,7 +18,7 @@ public class Main {
             listOfNumbers.addItem(new Node(a));
         }
         listOfNumbers.traverse(listOfNumbers.getRoot());
-        list.deleteItem(new Node("3"));
+        listOfNumbers.deleteItem(new Node("3"));
         listOfNumbers.traverse(listOfNumbers.getRoot());
 
     }
