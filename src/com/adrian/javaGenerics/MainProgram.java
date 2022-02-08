@@ -2,7 +2,7 @@ package com.adrian.javaGenerics;
 
 import java.util.ArrayList;
 
-public class GenericsPart2 {
+public class MainProgram {
     public static void main(String[] args) {
         Team<FootballPlayer> steaua = new Team<>("Steaua");
         Team<FootballPlayer> dinamo = new Team<>("Dinamo");
